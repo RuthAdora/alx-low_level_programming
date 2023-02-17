@@ -5,6 +5,7 @@
  * main - a program will assign a random number
  * Return: 0 (success)
  */
+
 int main(void)
 {
 	int n;
