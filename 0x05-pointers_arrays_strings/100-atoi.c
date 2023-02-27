@@ -32,7 +32,8 @@ if (d % 2)
 digit = -digit;
 o = o * 10 + digit;
 r = 1;
-if (s[a + 1] < '0' || s[a + 1] > '9')break;
+if (s[a + 1] < '0' || s[a + 1] > '9')
+break;
 r = 0;
 }
 a++;
