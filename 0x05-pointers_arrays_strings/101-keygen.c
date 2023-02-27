@@ -7,18 +7,18 @@
 */
 int main(void)
 {
-int d = 0, o = 0;
-time_t c;
+int r = 0, c = 0;
+time_t t;
 
-srand((unsigned int) time(&c));
-while (o < 2772)
+srand((unsigned int) time(&t));
+while (c < 2772)
 {
-d = rand() % 128;
-if ((o + d) > 2772)
+r = rand() % 128;
+if ((c + r) > 2772)
 break;
-o = o + d;
-printf("%o", d);
+c = c + r;
+printf("%c", r);
 }
-printf("%o\n", (2772 - o));
+printf("%c\n", (2772 - c));
 return (0);
 }
