@@ -3,29 +3,45 @@
 /**
 * _atoi - convert a string to an integer
 * @s: char
-* Return: num * sign
+* Return: int converted from string
 */
 
 int _atoi(char *s)
 {
-int sign = 1, num = 0;
+int a, d, o, len, r, digit;
 
-while (*s)
+a = 0;
+d = 0;
+o = 0;
+len = 0;
+r = 0;
+digit = 0;
+
+while (s[len] != '\0')
+len++;
+
+while (a < len && r == 0)
 {
-if (*s == '-')
+if (s[a] == '-')
+++d;
+
+if (s[a] >= '0' && s[a] <= '9')
 {
-sign = -1;
+digit = s[a] - '0';
+if (d % 2)
+digit = -digit;
+o = o * 10 + digit;
+r = 1;
+if (s[a + 1] < '0' || s[a + 1] > '9')break;
+r = 0;
 }
-else if (*s >= '0' && *s <= '9')
-{
-num = num * 10 + (*s - '0');
+a++;
 }
-else if (num > 0)
-{
-break;
-}
-s++;
-}
-return (num *sign);
+
+if (r == 0)
+return (0);
+
+return (o);
+
 }
 
