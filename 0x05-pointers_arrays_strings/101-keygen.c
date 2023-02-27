@@ -1,31 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-
-#define PASSWORD_LENGTH 11
 /**
-* main - a program that generates
-* random valid password
-* Return: (0)
+* main - generates keygen.
+* Return: 0 Always.
 */
 int main(void)
 {
-char password[PASSWORD_LENGTH];
+int d = 0, o = 0;
+time_t c;
 
-const char charset[] =
-	"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-srand(time(NULL));
-
-/* Generate random password */
-for (int i = 0; i < PASSWORD_LENGTH - 1; i++)
+srand((unsigned int) time(&c));
+while (o < 2772)
 {
-password[i] = charset[rand() % (sizeof(charset) - 1)];
+d = rand() % 128;
+if ((o + d) > 2772)
+break;
+o = o + d;
+printf("%o", d);
 }
-password[PASSWORD_LENGTH - 1] = '\0';
-
-/* Print password */
-printf("%s\n", password);
-
+printf("%o\n", (2772 - o));
 return (0);
 }
