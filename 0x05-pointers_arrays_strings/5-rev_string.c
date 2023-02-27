@@ -9,12 +9,16 @@
 
 void rev_string(char *s)
 {
-int len = strlen(s);
+int len = 0, i = 0;
+char tmp;
 
-for (int i = 0; i < len / 2; i++)
+while (s[i++])
+len++;
+
+for (i = len - 1; i >= len / 2; i--)
 {
-char temp = s[i];
-s[i] = s[len - 1 - i];
-s[len - 1 - i] = temp;
+tmp = s[i];
+s[i] = s[len - i - 1];
+s[len - i - 1] = tmp;
 }
 }
