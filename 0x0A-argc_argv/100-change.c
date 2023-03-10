@@ -53,13 +53,14 @@ return (0);
 
 }
 
+j = 0;
 
-
-for (j = 0; j < 5 && num >= 0; j++)
+for (j < 5 && num >= 0; j++)
 
 {
 
-while (num >= coins[j])
+while 
+	(num >= coins[j])
 
 {
 
