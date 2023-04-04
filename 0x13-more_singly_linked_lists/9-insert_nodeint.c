@@ -1,6 +1,6 @@
 /*
  * File: 9-insert_nodeint.c
- * Auth: edwin nyongesa
+ * Auth: ruth adora
  */
 
 #include "lists.h"
