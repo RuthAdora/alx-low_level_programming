@@ -1,6 +1,6 @@
 /*
  * File: 0-print_listint.c
- * Auth: ruth
+ * Auth: ruth adora
  */
 
 #include "lists.h"
